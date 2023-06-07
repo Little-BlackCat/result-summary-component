@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: #000; */
+  font-size: 18px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  /* height: 100vh; */
+  
+}
+
+/* color */
+:root {
+  /* Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  --light-red-bg: hsl(0, 100%, 87%);
+  --orangey-yellow-bg: hsl(39, 100%, 76%);
+  --green-teal-bg: hsl(166, 100%, 67%);
+  --cobalt-blue-bg: hsl(234, 85%, 65%);
+
+  /* Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%); /* (background) */
+  --light-royal-blue: hsl(241, 81%, 54%); /* (background) */
+
+  --violet-blue: hsla(256, 72%, 46%, 1); /* (circle) */
+  --persian-blue: hsla(241, 72%, 46%, 0); /* (circle) */
+
+  /* Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+.p-red {
+  color: var(--light-red);
+}
+
+.p-yellow {
+  color: var(--orangey-yellow);
+}
+
+.p-green {
+  color: var(--green-teal);
+}
+
+.p-blue {
+  color: var(--cobalt-blue);
+}
+
+.p-dark {
+  color: var(--dark-gray-blue);
+}
+
+.bg-red {
+  background: var(--light-red-bg);
+}
+
+.bg-yellow {
+  background: var(--orangey-yellow-bg);
+}
+
+.bg-green {
+  background: var(--green-teal-bg);
+}
+
+.bg-blue {
+  background: var(--cobalt-blue-bg);
+}
+
+main {
+  display: flex;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  max-height: 70%;
+}
+
+section {
+  text-align: center;
+  padding: 1.5rem;
+  width: 100%;
+  
+}
+
+header {
+  font-weight: 700;
+}
+
+.result-header {
+  color: var(--light-lavender);
+}
+
+.result-section {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  border-radius: 25px;
+  color: var(--white);
+  position: relative;
+}
+
+.show-score {
+  display: flex;
+  margin: 2rem;
+  justify-content: center;
+}
+
+.result-score {
+  display: grid;
+  background: linear-gradient(var(--violet-blue), var(--light-royal-blue));
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.score {
+  font-weight: 800;
+  font-size: 60px;
+  padding-top: 30px;
+}
+
+.full-score {
+  padding-bottom: 40px;
+  color: var(--light-lavender);
+}
+
+p {
+  padding: 1.5rem;
+  color: var(--pale-blue);
+}
+
+.summary-section {
+  /* background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue)); */
+  border-radius: 0 25px 25px 0;
+  color: var(--white);
+  position: relative;
+  box-shadow: 10px 5px 5px var(--light-lavender);
+  
+}
+
+.summary-header {
+  text-align: left;
+  margin-bottom: 0.8rem;
+  color: #000;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 7px;
+}
+
+.content-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+small {
+  font-size: 16px;
+}
+
+.scale {
+  color: var(--pale-blue);
+  font-size: 16px;
+}
+
+.btn{
+  margin-top: 2rem;
+}
+
+button {
+  border-style: none;
+  padding: 1rem;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--white);
+  background: var(--dark-gray-blue);
+  border-radius: 30px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: var(--violet-blue);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (max-width: 375px) {
+  main {
+    display: grid;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    max-height: 100%;
+    max-width: fit-content;
+  }
+
+  .result-section {
+    border-radius: 0 0 25px 25px;
+  }
+
+  .summary-section {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  footer {
+    position: relative;
+  }
+}
